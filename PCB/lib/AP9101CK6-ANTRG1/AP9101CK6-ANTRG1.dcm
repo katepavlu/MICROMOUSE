@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AP9101CK6-ANTRG1
+D Battery Management Multicell Batt Manager
+K
+F https://www.diodes.com/assets/Datasheets/AP9101C.pdf
+$ENDCMP
+#
+#End Doc Library
