@@ -7,4 +7,5 @@
   (lib (name "10164359-00011LF")(type "KiCad")(uri "${KIPRJMOD}/lib/10164359-00011LF")(options "")(descr ""))
   (lib (name "1825232-1")(type "KiCad")(uri "${KIPRJMOD}/lib/1825232-1")(options "")(descr ""))
   (lib (name "PTS636_SL50_LFS")(type "KiCad")(uri "${KIPRJMOD}/lib/PTS636_SL50_LFS")(options "")(descr ""))
+  (lib (name "Custom_parts")(type "KiCad")(uri "${KIPRJMOD}/Custom_parts.pretty")(options "")(descr ""))
 )

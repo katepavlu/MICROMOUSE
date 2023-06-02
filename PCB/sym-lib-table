@@ -5,4 +5,5 @@
   (lib (name "ICM-20602")(type "KiCad")(uri "${KIPRJMOD}/lib/ICM-20602/ICM-20602.kicad_sym")(options "")(descr ""))
   (lib (name "MCP73213-A6SI_MF")(type "KiCad")(uri "${KIPRJMOD}/lib/MCP73213-A6SI_MF/MCP73213-A6SI_MF.kicad_sym")(options "")(descr ""))
   (lib (name "LMR51420")(type "KiCad")(uri "${KIPRJMOD}/lib/LMR51420/LMR51420.kicad_sym")(options "")(descr ""))
+  (lib (name "Custom_parts")(type "KiCad")(uri "${KIPRJMOD}/lib/LMR51420/Custom_parts.kicad_sym")(options "")(descr ""))
 )
