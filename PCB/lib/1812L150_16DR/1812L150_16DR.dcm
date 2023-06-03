@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1812L150_16DR
+D Resettable Fuses - PPTC 16V 1.50A 1812 PTC Poly Halo-Free
+K
+F http://www.littelfuse.com/~/media/electronics/datasheets/resettable_ptcs/littelfuse_ptc_1812l_datasheet.pdf.pdf
+$ENDCMP
+#
+#End Doc Library
