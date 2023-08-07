@@ -1,0 +1,220 @@
+{
+    "frameEnd": "*/",
+    "frameStart": "/*",
+    "groups": [
+        {
+            "datasets": [
+                {
+                    "alarm": 8.4,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": false,
+                    "led": false,
+                    "log": false,
+                    "max": 8.4,
+                    "min": 6.55,
+                    "title": "Voltage",
+                    "units": "V",
+                    "value": "%1",
+                    "widget": ""
+                },
+                {
+                    "alarm": 100,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": false,
+                    "led": false,
+                    "log": false,
+                    "max": 100,
+                    "min": 0,
+                    "title": "SoC",
+                    "units": "%",
+                    "value": "%2",
+                    "widget": "bar"
+                }
+            ],
+            "title": "Battery",
+            "widget": ""
+        },
+        {
+            "datasets": [
+                {
+                    "alarm": 3.3,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 3.3,
+                    "min": 0,
+                    "title": "Left",
+                    "units": "V",
+                    "value": "%3",
+                    "widget": "bar"
+                },
+                {
+                    "alarm": 3.3,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 3.3,
+                    "min": 0,
+                    "title": "Front Left",
+                    "units": "V",
+                    "value": "%4",
+                    "widget": "bar"
+                },
+                {
+                    "alarm": 3.3,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 3.3,
+                    "min": 0,
+                    "title": "Front Right",
+                    "units": "V",
+                    "value": "%5",
+                    "widget": "bar"
+                },
+                {
+                    "alarm": 3.3,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 3.3,
+                    "min": 0,
+                    "title": "Right",
+                    "units": "V",
+                    "value": "%6",
+                    "widget": "bar"
+                }
+            ],
+            "title": "Proximity",
+            "widget": ""
+        },
+        {
+            "datasets": [
+                {
+                    "alarm": 0,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 0,
+                    "min": 0,
+                    "title": "Accelerometer X",
+                    "units": "m/s²",
+                    "value": "%7",
+                    "widget": "x"
+                },
+                {
+                    "alarm": 0,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 0,
+                    "min": 0,
+                    "title": "Accelerometer Y",
+                    "units": "m/s²",
+                    "value": "%8",
+                    "widget": "y"
+                },
+                {
+                    "alarm": 0,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 0,
+                    "min": 0,
+                    "title": "Accelerometer Z",
+                    "units": "m/s²",
+                    "value": "%9",
+                    "widget": "z"
+                }
+            ],
+            "title": "Accelerometer",
+            "widget": "accelerometer"
+        },
+        {
+            "datasets": [
+                {
+                    "alarm": 0,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 0,
+                    "min": 0,
+                    "title": "Gyro X",
+                    "units": "rad/s",
+                    "value": "%10",
+                    "widget": ""
+                },
+                {
+                    "alarm": 0,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 0,
+                    "min": 0,
+                    "title": "Gyro Y",
+                    "units": "rad/s",
+                    "value": "%11",
+                    "widget": ""
+                },
+                {
+                    "alarm": 0,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": true,
+                    "led": false,
+                    "log": false,
+                    "max": 0,
+                    "min": 0,
+                    "title": "Gyro Z",
+                    "units": "",
+                    "value": "%12",
+                    "widget": ""
+                }
+            ],
+            "title": "Gyro",
+            "widget": "multiplot"
+        },
+        {
+            "datasets": [
+                {
+                    "alarm": 0,
+                    "fft": false,
+                    "fftSamples": 1024,
+                    "graph": false,
+                    "led": false,
+                    "log": false,
+                    "max": 0,
+                    "min": 0,
+                    "title": "Temp",
+                    "units": "°C",
+                    "value": "%13",
+                    "widget": ""
+                }
+            ],
+            "title": "Misc",
+            "widget": ""
+        }
+    ],
+    "separator": ",",
+    "title": "MICROMOUSE"
+}
