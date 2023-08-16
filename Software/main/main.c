@@ -15,6 +15,7 @@
 #include "batt_soc/batt_soc.h"
 #include "adc/adc.h"
 #include "icm20602/icm20602.h"
+#include "bluetooth/bluetooth.h"
 
 const char *TAG = "MICROMOUSE";
 
@@ -24,16 +25,18 @@ const float pi = 3.141592653589;
 
 imu_t imu;
 
-#define SERIAL_STUDIO
+char LogBuffer[200] = {};
+
+//#define SERIAL_STUDIO
 
 void app_main(void)
 {
-    #ifdef SERIAL_STUDIO
-        esp_log_level_set("MICROMOUSE", ESP_LOG_NONE); //disable logging
-    #endif
+    esp_log_level_set("MICROMOUSE", ESP_LOG_NONE); //disable logging
 
     sensor_init();
     imu_init();
+
+    bluetooth_init();
 
     while (1) {
         ESP_ERROR_CHECK(adc_oneshot_read(adc2_handle, V_SENSE, &adc_raw[4]));
@@ -49,30 +52,16 @@ void app_main(void)
             get_prox(sensors[i], adc_raw, voltage);
         }
 
-        #ifndef SERIAL_STUDIO
-            vTaskDelay(pdMS_TO_TICKS(1000));
-        #endif
-        #ifdef SERIAL_STUDIO
-        #if 0
-            printf("/*%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f*/", 
-            batt_voltage/1000.0, batt_charge, 
-            voltage[0]/1000.0, voltage[1]/1000.0, voltage[2]/1000.0, voltage[3]/1000.0, 
-            imu.acc.x, imu.acc.y, imu.acc.z,
-            imu.omega.x, imu.omega.y, imu.omega.z,
-            imu.temp);
-            vTaskDelay(pdMS_TO_TICKS(100));
-            */
-        #endif
+        sprintf(LogBuffer, "/*%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f*/\n", 
+        batt_voltage/1000.0, batt_charge*100.0,
+        voltage[0]/1000.0, voltage[1]/1000.0, voltage[2]/1000.0, voltage[3]/1000.0,
+        imu.acc.x, imu.acc.y, imu.acc.z,
+        imu.omega.x, imu.omega.y, imu.omega.z,
+        imu.temp);
 
-            printf("/*%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f*/\n", 
-            batt_voltage/1000.0, batt_charge*100.0,
-            voltage[0]/1000.0, voltage[1]/1000.0, voltage[2]/1000.0, voltage[3]/1000.0,
-            imu.acc.x, imu.acc.y, imu.acc.z,
-            imu.omega.x, imu.omega.y, imu.omega.z,
-            imu.temp);
-            vTaskDelay(pdMS_TO_TICKS(100));
+        bluetooth_log(LogBuffer);
 
-        #endif
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 
 }

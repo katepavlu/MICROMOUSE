@@ -9,6 +9,9 @@
   "idf.flashType": "UART",
   "files.associations": {
     "adc_oneshot.h": "c",
-    "esp_log.h": "c"
+    "esp_log.h": "c",
+    "task.h": "c",
+    "bluetooth.h": "c",
+    "esp_spp_api.h": "c"
   }
 }

@@ -55,10 +55,10 @@ gpio_config_t io_conf = {
     .pull_up_en = 0 //disable pull-up mode
 };
 
-void sensor_init(){
+void sensor_init(void){
 
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config2, &adc2_handle)); //initialise the adc
-    bool do_calibration2 = adc_calibration_init(ADC_UNIT_2, EXAMPLE_ADC_ATTEN, &adc2_cali_handle); //initialise the calibration
+    adc_calibration_init(ADC_UNIT_2, EXAMPLE_ADC_ATTEN, &adc2_cali_handle); //initialise the calibration
     for(int i=0; i<4; i++){
         ESP_ERROR_CHECK(adc_oneshot_config_channel(adc2_handle, sensors[i].channel, &config)); // configure oneshot adcs for the sensors
     }
